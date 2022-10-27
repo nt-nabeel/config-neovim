@@ -8,7 +8,17 @@ M.cmp = function()
 	end
 
 	local luasnip = require("luasnip")
+	local lspkind = require("lspkind")
 	local config = {
+		formatting = {
+			format = lspkind.cmp_format({
+				mode = "symbol_text",
+				maxwidth = 50,
+				before = function(entry, vim_item)
+					return vim_item
+				end,
+			}),
+		},
 		snippet = {
 			expand = function(args)
 				luasnip.lsp_expand(args.body)
