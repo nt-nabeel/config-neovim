@@ -11,6 +11,8 @@ end
 
 local packer_bootstrap = ensure_packer()
 
+vim.keymap.set("n", "<leader>ps", "<cmd>PackerSync<cr>", {})
+
 return require("packer").startup(function(use)
 	use("wbthomason/packer.nvim")
 
