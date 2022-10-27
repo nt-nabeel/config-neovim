@@ -6,6 +6,12 @@ M.setup = function(use)
 	use("lewis6991/gitsigns.nvim")
 	use("editorconfig/editorconfig-vim")
 	use({
+		"nvim-tree/nvim-tree.lua",
+		requires = {
+			"nvim-tree/nvim-web-devicons",
+		},
+	})
+	use({
 		"nvim-telescope/telescope.nvim",
 		requires = {
 			"nvim-lua/plenary.nvim",

@@ -30,6 +30,18 @@ M.gitsigns = function()
 	plugin.setup()
 end
 
+M.tree = function()
+	local ok, plugin = pcall(require, "nvim-tree")
+
+	if not ok then
+		return
+	end
+
+	vim.keymap.set("n", "<space>fe", "<cmd>NvimTreeToggle<cr>", {})
+
+	plugin.setup()
+end
+
 M.telescope = function()
 	local ok, plugin = pcall(require, "telescope")
 
@@ -82,6 +94,7 @@ M.setup = function()
 	M.autopairs()
 	M.comment()
 	M.gitsigns()
+	M.tree()
 	M.telescope()
 	M.null_ls()
 end
