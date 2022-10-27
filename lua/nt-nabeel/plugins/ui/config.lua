@@ -8,7 +8,14 @@ M.treesitter = function()
 	end
 
 	local config = {
-		ensure_installed = { "lua" },
+		ensure_installed = {
+			"lua",
+			"html",
+			"css",
+			"javascript",
+			"typescript",
+			"python",
+		},
 		sync_install = false,
 		auto_install = true,
 		highlight = {
