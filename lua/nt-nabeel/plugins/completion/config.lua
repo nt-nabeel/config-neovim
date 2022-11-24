@@ -56,6 +56,7 @@ M.cmp = function()
 			{ name = "luasnip" },
 		}, {
 			{ name = "buffer" },
+			{ name = "path" },
 		}),
 	}
 
@@ -110,10 +111,15 @@ M.lspconfig = function()
 	}
 
 	plugin.sumneko_lua.setup(config)
+	plugin.jsonls.setup(config)
 	plugin.html.setup(config)
 	plugin.cssls.setup(config)
 	plugin.tsserver.setup(config)
 	plugin.pyright.setup(config)
+	plugin.intelephense.setup(config)
+	plugin.gopls.setup(config)
+	plugin.dockerls.setup(config)
+	plugin.yamlls.setup(config)
 end
 
 M.setup = function()
