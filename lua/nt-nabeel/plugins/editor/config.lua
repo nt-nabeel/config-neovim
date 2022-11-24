@@ -72,19 +72,21 @@ M.null_ls = function()
 			formatting.stylua, -- Formatting for lua
 			formatting.prettier, -- Formatting for html, css, js, json
 			formatting.black, -- Formatting for python
+			formatting.blade_formatter, -- Formatting for blade
 			diagnostic.eslint_d, -- Diagnostic for javascript and typescript
 			diagnostic.flake8, -- Diagnostic for python
 		},
-		on_attach = function(client, bufnr)
-			if client.supports_method("textDocument/formatting") then
-				vim.api.nvim_create_autocmd("BufWritePre", {
-					buffer = bufnr,
-					callback = function()
-						vim.lsp.buf.format({ timeout_ms = 5000 })
-					end,
-				})
-			end
-		end,
+		-- Uncomment this code for auto format on save
+		-- on_attach = function(client, bufnr)
+		-- 	if client.supports_method("textDocument/formatting") then
+		-- 		vim.api.nvim_create_autocmd("BufWritePre", {
+		-- 			buffer = bufnr,
+		-- 			callback = function()
+		-- 				vim.lsp.buf.format({ timeout_ms = 5000 })
+		-- 			end,
+		-- 		})
+		-- 	end
+		-- end,
 	}
 
 	plugin.setup(config)
