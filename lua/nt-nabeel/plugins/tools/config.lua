@@ -20,10 +20,15 @@ M.mason_lspconfig = function()
 	local config = {
 		ensure_installed = {
 			"sumneko_lua",
+			"jsonls",
 			"html",
 			"cssls",
 			"tsserver",
 			"pyright",
+			"intelephense",
+			"gopls",
+			"dockerls",
+			"yamlls",
 		},
 	}
 
@@ -42,6 +47,9 @@ M.mason_null_ls = function()
 			"stylua", -- Formatting for lua
 			"prettier", -- Formatting for html, css, js, json
 			"black", -- Formatting for python
+			"blade_formatter", -- Formatting for blade
+			"goimports", -- Formatting for golang
+			"golines", -- Formatting for golang
 			"eslint_d", -- Diagnostic for javascript and typescript
 			"flake8", -- Diagnostic for python
 		},
