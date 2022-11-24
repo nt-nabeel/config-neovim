@@ -1,5 +1,20 @@
 local M = {}
 
+M.catppuccin = function()
+	local ok, plugin = pcall(require, "catppuccin")
+
+	if not ok then
+		return
+	end
+
+	local config = {
+		flavour = "mocha", -- mocha, macchiato, frappe, latte
+	}
+
+	plugin.setup(config)
+	vim.api.nvim_command("colorscheme catppuccin")
+end
+
 M.treesitter = function()
 	local ok, plugin = pcall(require, "nvim-treesitter.configs")
 
@@ -75,6 +90,7 @@ M.lspkind = function()
 end
 
 M.setup = function()
+	M.catppuccin()
 	M.treesitter()
 	M.lspkind()
 end
