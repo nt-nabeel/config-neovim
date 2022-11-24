@@ -18,6 +18,7 @@ return require("packer").startup(function(use)
 
 	require("nt-nabeel.plugins.completion").setup(use)
 	require("nt-nabeel.plugins.editor").setup(use)
+	require("nt-nabeel.plugins.filetype").setup(use)
 	require("nt-nabeel.plugins.tools").setup(use)
 	require("nt-nabeel.plugins.ui").setup(use)
 
