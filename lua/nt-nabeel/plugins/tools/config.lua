@@ -23,6 +23,7 @@ M.mason_lspconfig = function()
 			"jsonls",
 			"html",
 			"cssls",
+			"tailwindcss",
 			"tsserver",
 			"pyright",
 			"intelephense",
