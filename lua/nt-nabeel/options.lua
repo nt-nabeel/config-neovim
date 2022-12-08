@@ -1,5 +1,6 @@
 local opt = vim.opt
 opt.signcolumn = "yes"
+opt.swapfile = false
 
 -- number line
 opt.number = true
